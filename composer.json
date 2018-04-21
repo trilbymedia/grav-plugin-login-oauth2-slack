@@ -1,0 +1,10 @@
+{
+    "require": {
+        "adam-paterson/oauth2-slack": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Grav\\Plugin\\Login\\OAuth2\\": "classes/"
+        }
+    }
+}

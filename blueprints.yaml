@@ -1,0 +1,33 @@
+name: Login OAuth2 Slack
+version: 1.0.0
+description: OAuth2 Provider for Slack
+icon: plug
+author:
+  name: Trilby Media
+  email: hello@trilby.media
+homepage: https://github.com/trilbymedia/grav-plugin-login-o-auth2-slack
+demo: http://demo.yoursite.com
+keywords: grav, plugin, etc
+bugs: https://github.com/trilbymedia/grav-plugin-login-o-auth2-slack/issues
+docs: https://github.com/trilbymedia/grav-plugin-login-o-auth2-slack/blob/develop/README.md
+license: MIT
+dependencies:
+  - { name: login-oauth2, version: '~1.0' }
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+    text_var:
+      type: text
+      label: Text Variable
+      help: Text to add to the top of a page
