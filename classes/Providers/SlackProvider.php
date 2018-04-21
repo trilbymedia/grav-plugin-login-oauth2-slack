@@ -36,7 +36,7 @@ class SlackProvider extends BaseProvider
     public function getUserData($user)
     {
         $data = $user->toArray();
-xdebug_break();
+
         $data_user = [
             'id'         => $user->getId(),
             'login'      => $user->getName(),

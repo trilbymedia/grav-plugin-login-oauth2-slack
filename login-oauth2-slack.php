@@ -27,15 +27,7 @@ class LoginOAuth2SlackPlugin extends Plugin
                 ['autoload', 100000],
                 ['onPluginsInitialized', 0]
             ],
-//            'onTask.login.oauth2'       => ['loginRedirect', 0],
-//            'onTask.callback.oauth2'    => ['loginCallback', 0],
             'onTwigTemplatePaths'       => ['onTwigTemplatePaths', 0],
-//            'onLoginPage'               => ['onLoginPage', 10],
-//            'onUserLoginAuthenticate'   => ['userLoginAuthenticate', 1000],
-//            'onUserLoginFailure'        => ['userLoginFailure', 0],
-//            'onUserLogin'               => ['userLogin', 0],
-//            'onUserLogout'              => ['userLogout', 0],
-//            'onOAuth2Username'          => ['onOAuth2Username', 0],
         ];
     }
 
@@ -65,6 +57,4 @@ class LoginOAuth2SlackPlugin extends Plugin
         $twig = $this->grav['twig'];
         $twig->twig_paths[] = __DIR__ . '/templates';
     }
-
-
 }
