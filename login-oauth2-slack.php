@@ -27,6 +27,8 @@ class LoginOAuth2SlackPlugin extends Plugin
                 ['autoload', 100000],
                 ['onPluginsInitialized', 0]
             ],
+            'onTwigLoader'              => ['onTwigLoader', 0],
+            'onTwigSiteVariables'       => ['onTwigSiteVariables', 0],
             'onTwigTemplatePaths'       => ['onTwigTemplatePaths', 0],
         ];
     }
@@ -49,6 +51,14 @@ class LoginOAuth2SlackPlugin extends Plugin
         return require __DIR__ . '/vendor/autoload.php';
     }
 
+    public function onTwigLoader()
+    {
+        $media_paths = $this->grav['locator']->findResources('plugins://login-oauth2-slack/media');
+        foreach(array_reverse($media_paths) as $images_path) {
+            $this->grav['twig']->addPath($images_path, 'oauth2-media');
+        }
+    }
+
     /**
      * [onTwigTemplatePaths] Add twig paths to plugin templates.
      */
@@ -56,5 +66,13 @@ class LoginOAuth2SlackPlugin extends Plugin
     {
         $twig = $this->grav['twig'];
         $twig->twig_paths[] = __DIR__ . '/templates';
+    }
+
+    public function onTwigSiteVariables()
+    {
+        // add CSS for frontend if required
+        if (!$this->isAdmin() && $this->config->get('plugins.login-oauth2-slack.built_in_css')) {
+            $this->grav['assets']->add('plugin://login-oauth2-slack/css/login-oauth2-slack.css');
+        }
     }
 }

@@ -1,0 +1,6 @@
+.form-oauth2 .button.slack {
+    background: #56B68B;
+}
+.form-oauth2 .button.slack:hover {
+    background: #3D9D72;
+}
