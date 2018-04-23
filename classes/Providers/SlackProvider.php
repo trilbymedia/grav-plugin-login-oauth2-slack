@@ -19,7 +19,7 @@ class SlackProvider extends BaseProvider
         $options += [
             'clientId'      => $this->config->get('plugins.login-oauth2-slack.client_id'),
             'clientSecret'  => $this->config->get('plugins.login-oauth2-slack.client_secret'),
-            'redirectUri'   => $this->config->get('plugins.login-oauth2.callback_uri'),
+            'redirectUri'   => $this->getCallbackUri(),
         ];
 
         parent::__construct($options);
