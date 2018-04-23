@@ -38,7 +38,12 @@ class LoginOAuth2SlackPlugin extends Plugin
      */
     public function onPluginsInitialized()
     {
-        $this->grav['oauth2']->addProvider('slack');
+        if (isset($this->grav['oauth2'])) {
+            $this->grav['oauth2']->addProvider('slack');   
+        } else {
+            $this->grav['messages']->add('oauth2-slack plugin requires oauth2 plugin but it apperas to not be installed or enabled', 'error');
+        }
+        
     }
 
     /**
