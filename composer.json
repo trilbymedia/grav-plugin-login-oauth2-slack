@@ -3,7 +3,13 @@
         "adam-paterson/oauth2-slack": "^1.1"
     },
     "replace": {
-        "league/oauth2-client": "*"
+        "league/oauth2-client": "*",
+        "paragonie/random_compat": "*",
+        "psr/http-message": "*",
+        "guzzlehttp/psr7": "*",
+        "guzzlehttp/promises": "*",
+        "guzzlehttp/guzzle": "*"
+
     },
     "autoload": {
         "psr-4": {

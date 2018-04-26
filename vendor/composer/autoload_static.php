@@ -4,25 +4,11 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitd9db8df3c00354f01bac53f26c75bc20
+class ComposerStaticInit430e9c46717d1524c5a5e868ca562296
 {
-    public static $files = array (
-        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
-        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
-        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
-    );
-
     public static $prefixLengthsPsr4 = array (
-        'P' => 
-        array (
-            'Psr\\Http\\Message\\' => 17,
-        ),
         'G' => 
         array (
-            'GuzzleHttp\\Psr7\\' => 16,
-            'GuzzleHttp\\Promise\\' => 19,
-            'GuzzleHttp\\' => 11,
             'Grav\\Plugin\\Login\\OAuth2\\' => 25,
         ),
         'A' => 
@@ -32,22 +18,6 @@ class ComposerStaticInitd9db8df3c00354f01bac53f26c75bc20
     );
 
     public static $prefixDirsPsr4 = array (
-        'Psr\\Http\\Message\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-        ),
-        'GuzzleHttp\\Psr7\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
-        ),
-        'GuzzleHttp\\Promise\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
-        ),
-        'GuzzleHttp\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
-        ),
         'Grav\\Plugin\\Login\\OAuth2\\' => 
         array (
             0 => __DIR__ . '/../..' . '/classes',
@@ -61,8 +31,8 @@ class ComposerStaticInitd9db8df3c00354f01bac53f26c75bc20
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitd9db8df3c00354f01bac53f26c75bc20::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitd9db8df3c00354f01bac53f26c75bc20::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit430e9c46717d1524c5a5e868ca562296::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit430e9c46717d1524c5a5e868ca562296::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }
