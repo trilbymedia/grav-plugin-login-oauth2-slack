@@ -1,6 +1,6 @@
 enabled: true
 built_in_css: true
-client_id: '134655729700.350240487728'
-client_secret: '7ed850705fef89aac3c5067974e898db'
+client_id: ''
+client_secret: ''
 options:
   scope: ['users:read', 'users:read.email']
